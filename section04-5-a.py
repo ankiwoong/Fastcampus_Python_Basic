@@ -17,15 +17,15 @@ print('2. print:\t', '''apple;orange;banana;lemon''')
 
 # 3. 화면에 * 기호 100개를 표시하세요.
 
-print('3. *100개:\t', star * 100)
+print('3. *100개:\t', '*' * 100)
 
 
 # 4. 문자열 "30" 을 각각 정수형, 실수형, 복소수형, 문자형으로 변환해보세요.
 
-print('4. 정수형:\t', int(string30))
-print('   실수형:\t', float(string30))
-print('   복소수형:\t', complex(string30))
-print('   문자형:\t', string30)
+print('4. 정수형:\t', int(str(30)))
+print('   실수형:\t', float(str(30)))
+print('   복소수형:\t', complex(str(30)))
+print('   문자형:\t', str(30))
 
 
 # 5. 다음 문자열 "Niceman" 에서 "man" 문자열만 추출해보세요.
@@ -38,10 +38,11 @@ print('5. 문자추출:\t', str[manIdx:manIdx + 3])
 # 6. 다음 문자열을 거꾸로 출력해보세요. : "Strawberry"
 
 sb = "Strawberry"
-print('6. reverse:\t', sbResult)
+print('6. reverse:\t', ''.join(reversed(sb)))
 
 
 # 7. 다음 문자열에서 '-'를 제거 후 출력하세요. : "010-7777-9999"
+import re
 
 phoneNumber = "010-7777-9999"
 print('7. - 제거:\t', re.sub('[^0-9]', '', phoneNumber))
